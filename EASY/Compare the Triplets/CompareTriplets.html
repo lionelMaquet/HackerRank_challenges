@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <script>
+        //https://www.hackerrank.com/challenges/compare-the-triplets/problem
+
+
+        const compareTriplets = (a,b) => {
+
+            let finalScores = [0,0];
+
+            for (let i = 0; i < a.length; i++) {
+                if (a[i] > b[i]) {
+                    finalScores[0]++
+                } else if (a[i] < b[i]) {
+                    finalScores[1]++
+                } else {
+                    finalScores = finalScores;
+                }
+            }
+
+            return finalScores
+
+
+
+        }
+
+        
+       
+
+
+    
+    
+    
+    
+    </script>
+</body>
+</html>

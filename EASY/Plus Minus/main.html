@@ -1,0 +1,54 @@
+<!Doctype <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+</head>
+<body>
+
+    <script>
+
+        // https://www.hackerrank.com/challenges/plus-minus/problem
+    
+    const ratio = (arrOfNum) => {
+
+        let positive = 0;
+        let negative = 0;
+        let zeros = 0;
+
+        for (let i = 0; i < arrOfNum.length ; i++) {
+            if (arrOfNum[i] > 0) {
+                positive++
+            } else if (arrOfNum[i] === 0) {
+                zeros++
+            } else {
+                negative++
+            }
+        }
+
+        console.log((positive/arrOfNum.length).toFixed(6))
+        console.log((zeros/arrOfNum.length).toFixed(6))
+        console.log((negative/arrOfNum.length).toFixed(6))
+    };
+
+    ratio([1,-1,1,1,0])
+
+
+
+
+
+
+
+
+
+
+
+        
+        
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <script>
+    // https://www.hackerrank.com/challenges/diagonal-difference/problem
+
+    let n = 3;
+    let matrix = [[5,5,6],
+                  [4,7,5],
+                  [9,8,9]];
+
+    
+
+    const DiagonalDifference = (n,matrix) => {
+
+        const leftDiagonal = (n,matrix) => {
+            let rowsAndCols = n;
+            let sum = 0;
+            for (let i =0; i < matrix.length; i++){
+                sum += matrix[i][i]
+            }
+            return sum
+        } 
+
+        let lftDiagonal = leftDiagonal(n,matrix)
+
+        const rightDiagonal = (n,matrix) => {
+            let rowsAndCols = n;
+            let sum = 0;
+            for (let i =0; i < matrix.length; i++){
+                sum += matrix[i][matrix.length-1-i]
+            }
+            return sum
+        }
+
+
+        let rghtDiagonal = rightDiagonal(n,matrix)
+
+            let difference = lftDiagonal - rghtDiagonal;
+            let absoluteDifference = difference;
+            if (difference <0) {
+                absoluteDifference = difference * (-1)
+            }
+            return absoluteDifference
+    }
+
+console.log(DiagonalDifference(n,matrix));
+
+
+    
+
+    </script>
+</body>
+</html>
