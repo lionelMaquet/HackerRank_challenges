@@ -26,7 +26,7 @@ function biggerIsGreater(w) {
   function lexicologicalTranslater(string) {
     let alphabet = "abcdefghijklmnopqrstuvwxyz";
     let lexNum = [];
-    for (letter of string) {
+    for (let letter of string) {
       lexNum.push(alphabet.indexOf(letter))
     }
 
@@ -53,16 +53,19 @@ function biggerIsGreater(w) {
   let bestPermLex = [];
   let bestPerm = "no answer";
 
-  for (number of originalLex) {
+  for (let number of originalLex) {
     bestPermLex.push(Infinity)
   }
 
   for (let permutation of permute(w)) {
 
     let permLex = lexicologicalTranslater(permutation)
-    if (compareLex(permLex,originalLex) == "greater" && compareLex(permLex, bestPermLex) == "smaller" ) {
-      bestPermLex = lexicologicalTranslater(permutation);
-      bestPerm = permutation;
+    if (compareLex(permLex,originalLex) == "greater") {
+      if (compareLex(permLex, bestPermLex) == "smaller" ) {
+        bestPermLex = lexicologicalTranslater(permutation);
+        bestPerm = permutation;
+      }
+
     }
   }
 
