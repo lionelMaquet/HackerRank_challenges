@@ -18,7 +18,7 @@ function biggerIsGreater(w) {
 
   }
 
-  let lexWord = lexTranslater(w)
+  let lexWord = lexTranslater(origWord)
 
 
   //step 2 : find position of the pivot point
