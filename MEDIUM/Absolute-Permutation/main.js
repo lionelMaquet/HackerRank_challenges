@@ -58,7 +58,7 @@ function absolutePermutation(n, k) {
 
 // Third try -- Works !
 
-function tabsolutePermutation(n, k) {
+function absolutePermutation(n, k) {
 
   if (k != 0) {
     if (!(n%(k*2) == 0)) {
