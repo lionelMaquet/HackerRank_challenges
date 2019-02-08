@@ -1,5 +1,7 @@
-// First try
+// First try -- Terminated due to timeout
 
+
+/*
 function absolutePermutation(n, k) {
 
   let origArray = [];
@@ -27,13 +29,14 @@ function absolutePermutation(n, k) {
   return newArray
 
 }
-
-console.log(absolutePermutation(100,2))
-
-
-// Second try
+*/
 
 
+
+
+// Second try -- Terminated due to timeout
+
+/*
 function absolutePermutation(n, k) {
 
   let answer = []
@@ -50,3 +53,47 @@ function absolutePermutation(n, k) {
   return answer
 
 }
+*/
+
+
+// Third try -- Works !
+
+function tabsolutePermutation(n, k) {
+
+  if (k != 0) {
+    if (!(n%(k*2) == 0)) {
+      return [-1]
+    }
+  }
+
+
+  let addK = true;
+  let kCounter = 0;
+  let answer = [];
+
+  for (let i = 1; i <= n; i ++) {
+    if (addK == true) {
+      answer.push(i + k);
+      kCounter++
+
+      if (kCounter == k) {
+        addK = false;
+        kCounter = 0;
+      }
+    } else if (addK == false) {
+      answer.push(i - k);
+      kCounter++
+
+      if (kCounter == k) {
+        addK = true;
+        kCounter = 0;
+      }
+    }
+  }
+
+  return answer;
+
+
+}
+
+console.log(tabsolutePermutation(12,3))
