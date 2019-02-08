@@ -1,3 +1,5 @@
+// First try
+
 function absolutePermutation(n, k) {
 
   let origArray = [];
@@ -27,3 +29,24 @@ function absolutePermutation(n, k) {
 }
 
 console.log(absolutePermutation(100,2))
+
+
+// Second try
+
+
+function absolutePermutation(n, k) {
+
+  let answer = []
+  for (let i = 1; i <= n; i++) {
+    if (i - k > 0 && !answer.includes(i - k)) {
+      answer.push(i - k)
+    } else if (i + k <= n && !answer.includes(i + k)) {
+      answer.push(i + k)
+    } else {
+      return [-1]
+    }
+  }
+
+  return answer
+
+}
