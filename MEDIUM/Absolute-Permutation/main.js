@@ -18,7 +18,7 @@ function absolutePermutation(n, k) {
       newArray.push(number+k);
       used.push(number+k)
     } else {
-      return -1
+      return [-1]
     }
   }
 
