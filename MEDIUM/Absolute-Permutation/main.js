@@ -95,5 +95,3 @@ function absolutePermutation(n, k) {
 
 
 }
-
-console.log(tabsolutePermutation(12,3))
