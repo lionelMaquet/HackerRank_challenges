@@ -23,7 +23,7 @@ function queensAttack(n, k, r_q, c_q, obstacles) {
 
     if ((obstacle[1] - obstacle[0]) == (queenPos[1] - queenPos[0])) {
       obstaclesDiagOne.push(obstacle)
-    } else if ((obstacle[0] - obstacle[1]) == (queenPos[0] - queenPos[1])) {
+    } else if ((obstacle[0] + obstacle[1]) == (queenPos[0] + queenPos[1])) {
       obstaclesDiagTwo.push(obstacle)
     }
   }
@@ -77,7 +77,6 @@ function queensAttack(n, k, r_q, c_q, obstacles) {
     farRightRowDiagOne = (size +1) - (c_q - r_q)
   }
 
-  console.log(farLeftRowDiagOne, farRightRowDiagOne)
 
   for (let obstacle of obstaclesDiagOne) {
     if (obstacle[0] > farLeftRowDiagOne && obstacle[0] < r_q) {
