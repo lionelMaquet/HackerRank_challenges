@@ -17,39 +17,34 @@ function surfaceArea(A) {
         let currentSide = A[i][j];
         let checkedSide;
 
-
-
-          for (let k = 1; k <= currentSide; k++) {
-            if (i + side[0] < 0 || i + side[0] >= A.length || j + side[1] < 0 || j + side[1] >= A[0].length ) {
-              sum++
-              console.log(currentSide)
-            } else {
-              console.log(currentSide)
-
-
-              checkedSide = A[(i + side[0])][j + (side[1])];
-              if (checkedSide < k) {
-                sum++
-              }
-
+        if (i + side[0] < 0 || i + side[0] >= A.length || j + side[1] < 0 || j + side[1] >= A[0].length ) {
+          // if the side is an edge
+          console.log(currentSide)
+          sum+= currentSide
+        } else {
+          checkedSide = A[(i + side[0])][j + (side[1])];
+            if (checkedSide < currentSide) {
+              console.log(currentSide - checkedSide)
+              sum += (currentSide - checkedSide)
+            }
           }
 
         }
 
-
+      sum+= 2// for the top and bottom sides
       }
 
-       sum+= 2// for the upper side
+
 
     }
 
 
-
+    return sum
   }
 
-  return sum
 
 
-}
 
-console.log(surfaceArea([[1]]))
+
+
+console.log(surfaceArea([ [ 1, 3, 4 ], [ 2, 2, 3 ], [ 1, 2, 4 ] ]))
